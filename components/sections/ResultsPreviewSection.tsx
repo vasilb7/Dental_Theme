@@ -19,7 +19,7 @@ export function ResultsPreviewSection() {
             subtitle={lang === 'bg' ? 'Вижте разликата, която нашата експертна грижа може да направи. Гордеем се, че помагаме на нашите пациенти да постигнат здравите и красиви усмивки, които заслужават.' : 'See the difference our expert care can make. We take pride in helping our patients achieve the healthy, beautiful smiles they deserve.'}
             className="mb-0 max-w-2xl"
           />
-          <Link href="/gallery" className="shrink-0">
+          <Link href={lang === 'bg' ? "/galeriya" : "/en/gallery"} className="shrink-0">
             <SecondaryButton>{lang === 'bg' ? 'Вижте цялата галерия' : 'View Full Gallery'}</SecondaryButton>
           </Link>
         </div>

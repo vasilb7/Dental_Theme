@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Linkedin, Mail, Phone } from 'lucide-react';
+import { Instagram, Mail, MailOpen, Phone } from 'lucide-react';
 
 export function FullTeamSection() {
   const { lang } = useLanguage();
@@ -143,14 +143,17 @@ export function FullTeamSection() {
                 />
                 <div className="absolute top-6 right-6 z-20">
                   <div className="flex flex-col gap-3 transform-gpu">
-                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90">
-                      <Linkedin className="w-4.5 h-4.5" />
+                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90 social-pop-group">
+                      <Instagram className="w-4.5 h-4.5 social-pop-icon" />
                     </button>
-                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90">
-                      <Mail className="w-4.5 h-4.5" />
+                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90 email-shake-group">
+                      <div className="email-shake-icon-container">
+                        <Mail className="w-4.5 h-4.5 email-icon-closed" />
+                        <MailOpen className="w-4.5 h-4.5 email-icon-open" />
+                      </div>
                     </button>
-                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90">
-                      <Phone className="w-4.5 h-4.5" />
+                    <button className="w-9 h-9 rounded-full bg-white/70 backdrop-blur-sm text-primary shadow-sm flex items-center justify-center hover:bg-white hover:shadow-md transition-all duration-200 active:scale-90 phone-ring-group">
+                      <Phone className="w-4.5 h-4.5 phone-ring-icon" />
                     </button>
                   </div>
                 </div>
@@ -168,7 +171,7 @@ export function FullTeamSection() {
                 </div>
                 
                 <div className="mt-auto">
-                  <Link href="/book-appointment" className="inline-block w-full text-center py-4 bg-primary text-white font-bold rounded-xl hover:bg-accent hover:text-primary transition-all shadow-sm hover:shadow-md">
+                  <Link href={lang === 'bg' ? "/zapazi-chas" : "/en/book-appointment"} className="inline-block w-full text-center py-4 bg-primary text-white font-bold rounded-xl hover:bg-accent hover:text-primary transition-all shadow-sm hover:shadow-md">
                     {lang === 'bg' ? 'Запази час' : 'Book Appointment'}
                   </Link>
                 </div>

@@ -37,9 +37,9 @@ export function BookingCTASection() {
               <span className="text-white/60 text-sm font-medium hidden sm:block">{lang === 'bg' ? 'или' : 'or'}</span>
               <a 
                 href="tel:+359877737772" 
-                className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-transparent px-4 xs:px-6 py-3.5 text-xs xs:text-sm font-semibold text-white transition-colors hover:bg-white/10 w-full sm:w-auto whitespace-nowrap"
+                className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-transparent px-4 xs:px-6 py-3.5 text-xs xs:text-sm font-semibold text-white transition-colors hover:bg-white/10 w-full sm:w-auto whitespace-nowrap phone-ring-group"
               >
-                <Phone className="mr-2 h-4 w-4" />
+                <Phone className="mr-2 h-4 w-4 phone-ring-icon" />
                 {lang === 'bg' ? 'Обадете се на +359 87 773 7772' : 'Call +359 87 773 7772'}
               </a>
             </div>

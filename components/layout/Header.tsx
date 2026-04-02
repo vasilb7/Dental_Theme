@@ -56,13 +56,13 @@ export function Header() {
         { name: 'Контакти', href: '/kontakti' }
       ]
     : [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Services', href: '/services' },
-        { name: 'Team', href: '/team' },
-        { name: 'Prices', href: '/prices' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'Home', href: '/en' },
+        { name: 'About', href: '/en/about' },
+        { name: 'Services', href: '/en/services' },
+        { name: 'Team', href: '/en/team' },
+        { name: 'Prices', href: '/en/prices' },
+        { name: 'FAQ', href: '/en/faq' },
+        { name: 'Contact', href: '/en/contact' }
       ];
 
   return (
@@ -74,7 +74,7 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
+            <Link href={lang === 'bg' ? "/" : "/en"} className="flex-shrink-0 flex items-center gap-3 group">
               <Image 
                 src="/logo_header.png" 
                 alt="DentalClinic Logo" 
@@ -111,17 +111,17 @@ export function Header() {
 
             {/* Desktop Actions */}
             <div className="hidden xl:flex items-center gap-4">
-              <a href="tel:+359877737772" className="flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-opacity whitespace-nowrap">
-                <Phone className="h-4 w-4" />
+              <a href="tel:+359877737772" className="flex items-center gap-2 text-primary font-medium hover:opacity-80 transition-opacity whitespace-nowrap phone-ring-group">
+                <Phone className="h-4 w-4 phone-ring-icon" />
                 <span className="text-sm">+359 87 773 7772</span>
               </a>
-              <Link href={lang === 'bg' ? "/zapazi-chas" : "/book-appointment"}>
+              <Link href={lang === 'bg' ? "/zapazi-chas" : "/en/book-appointment"}>
                 <PrimaryButton className="whitespace-nowrap">{lang === 'bg' ? 'Запази час' : 'Book Appointment'}</PrimaryButton>
               </Link>
               
               <div className="flex items-center gap-3 ml-2 border-l border-slate-200 pl-4">
                 <Link 
-                  href="/auth"
+                  href={lang === 'bg' ? "/auth" : "/en/auth"}
                   className="text-slate-600 hover:text-primary transition-all duration-300 p-2 rounded-full hover:bg-primary/5 focus:outline-none group"
                   aria-label={lang === 'bg' ? 'Профил' : 'Account'}
                   title={lang === 'bg' ? 'Профил' : 'Account'}
@@ -154,7 +154,7 @@ export function Header() {
             {/* Mobile menu button */}
             <div className="xl:hidden flex items-center gap-2 sm:gap-4">
               <Link 
-                href="/auth"
+                href={lang === 'bg' ? "/auth" : "/en/auth"}
                 className="text-slate-600 hover:text-primary transition-colors focus:outline-none p-2"
                 aria-label={lang === 'bg' ? 'Профил' : 'Account'}
               >
@@ -184,7 +184,7 @@ export function Header() {
           >
             {/* Mobile Header */}
             <div className="flex h-20 items-center justify-between px-4 sm:px-8 border-b border-slate-100 shrink-0 bg-white">
-              <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href={lang === 'bg' ? "/" : "/en"} className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Image 
                   src="/logo_header.png" 
                   alt="DentalClinic Logo" 
@@ -237,7 +237,7 @@ export function Header() {
                   className="space-y-6"
                 >
                   <Link 
-                    href="/auth"
+                    href={lang === 'bg' ? "/auth" : "/en/auth"}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center gap-4 text-2xl font-bold text-slate-800 group active:translate-x-2 transition-transform"
                   >
@@ -272,7 +272,7 @@ export function Header() {
                 <span className="text-xl">+359 87 773 7772</span>
               </a>
 
-              <Link href="/book-appointment" onClick={() => setIsMobileMenuOpen(false)} className="block">
+              <Link href={lang === 'bg' ? "/zapazi-chas" : "/en/book-appointment"} onClick={() => setIsMobileMenuOpen(false)} className="block">
                 <PrimaryButton className="w-full py-5 text-xl rounded-2xl shadow-lg shadow-primary/20">
                   {lang === 'bg' ? 'Запази час' : 'Book Appointment'}
                 </PrimaryButton>

@@ -1,4 +1,4 @@
-import GalleryPage from '../gallery/page';
+import GalleryPage from '../en/gallery/page';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

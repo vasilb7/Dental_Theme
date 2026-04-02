@@ -532,7 +532,7 @@ export function FAQSection() {
                   {lang === 'bg' ? 'Обадете ни се' : 'Call Us Now'}
                 </a>
                 <a 
-                  href="/contact"
+                  href={lang === 'bg' ? "/kontakti" : "/en/contact"}
                   className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-colors border border-white/20"
                 >
                   {lang === 'bg' ? 'Свържете се с нас' : 'Contact Us'}

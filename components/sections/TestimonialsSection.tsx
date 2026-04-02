@@ -19,7 +19,7 @@ export function TestimonialsSection() {
     },
     {
       name: 'Николай Петров',
-      text: 'Най-добрата клиника в София. Д-р Стефанова и нейният екип са невероятни професионалисти. Процедурата премина бързо и напълно безболезнено.',
+      text: 'Най-добрата клиника във Варна. Д-р Стефанова и нейният екип са невероятни професионалисти. Процедурата премина бързо и напълно безболезнено.',
       rating: 5,
       image: '/review_temple/Man_portrait_white_202603220741.jpeg',
       source: 'Google Review'
@@ -41,7 +41,7 @@ export function TestimonialsSection() {
     },
     {
       name: 'Nikolay Petrov',
-      text: 'The best clinic in Sofia. Dr. Stefanova and her team are incredible professionals. The procedure was quick and completely painless.',
+      text: 'The best clinic in Varna. Dr. Stefanova and her team are incredible professionals. The procedure was quick and completely painless.',
       rating: 5,
       image: '/review_temple/Man_portrait_white_202603220741.jpeg',
       source: 'Google Review'

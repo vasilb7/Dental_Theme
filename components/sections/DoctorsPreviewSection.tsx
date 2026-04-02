@@ -84,7 +84,7 @@ export function DoctorsPreviewSection() {
         </div>
         
         <div className="flex justify-center">
-          <Link href="/team">
+          <Link href={lang === 'bg' ? "/ekip" : "/en/team"}>
             <PrimaryButton>{lang === 'bg' ? 'Вижте целия екип' : 'View Full Team'}</PrimaryButton>
           </Link>
         </div>

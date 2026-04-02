@@ -10,11 +10,11 @@ import { DoctorsPreviewSection } from '@/components/sections/DoctorsPreviewSecti
 import { BookingCTASection } from '@/components/sections/BookingCTASection';
 
 export const metadata: Metadata = {
-  title: 'Дентална Клиника | Начало',
-  description: 'Добре дошли в нашата дентална клиника във Варна. Ние предлагаме модерно и безболезнено лечение за вашата усмивка.',
+  title: 'Dental Clinic | Home',
+  description: 'Welcome to our dental clinic in Varna. We offer modern and painless treatment for your smile.',
 };
 
-export default function HomePage() {
+export default function EnglishHomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroSection />

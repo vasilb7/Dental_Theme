@@ -1,4 +1,4 @@
-import ServicesPage from '../services/page';
+import ServicesPage from '../en/services/page';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

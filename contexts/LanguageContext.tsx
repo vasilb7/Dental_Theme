@@ -11,16 +11,17 @@ interface LanguageContextType {
 }
 
 const urlMapping: Record<string, string> = {
-  '/about': '/za-nas',
-  '/services': '/uslugi',
-  '/team': '/ekip',
-  '/prices': '/tseni',
-  '/faq': '/chzv',
-  '/contact': '/kontakti',
-  '/gallery': '/galeriya',
-  '/book-appointment': '/zapazi-chas',
-  '/privacy-policy': '/politika-za-poveritelnost',
-  '/terms': '/obshti-usloviya',
+  '/en/about': '/za-nas',
+  '/en/services': '/uslugi',
+  '/en/team': '/ekip',
+  '/en/prices': '/tseni',
+  '/en/faq': '/chzv',
+  '/en/contact': '/kontakti',
+  '/en/gallery': '/galeriya',
+  '/en/book-appointment': '/zapazi-chas',
+  '/en/privacy-policy': '/politika-za-poveritelnost',
+  '/en/terms': '/obshti-usloviya',
+  '/en': '/',
 };
 
 const bgToEnMapping = Object.fromEntries(
@@ -39,15 +40,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Detect language from URL first, then localStorage
-    const isBgRoute = Object.values(urlMapping).includes(pathname);
-    const isEnRoute = Object.keys(urlMapping).includes(pathname);
+    const isEnRoute = pathname.startsWith('/en/') || pathname === '/en';
+    const isBgRoute = Object.values(urlMapping).includes(pathname) || (pathname === '/' && !isEnRoute);
     
     let initialLang: Language = 'bg';
     
-    if (isBgRoute) {
-      initialLang = 'bg';
-    } else if (isEnRoute) {
+    if (isEnRoute) {
       initialLang = 'en';
+    } else if (isBgRoute) {
+      initialLang = 'bg';
     } else {
       const savedLang = typeof window !== 'undefined' ? localStorage.getItem('preferredLang') as Language : 'bg';
       initialLang = (savedLang === 'bg' || savedLang === 'en') ? savedLang : 'bg';
@@ -71,10 +72,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const newLang = state.lang === 'bg' ? 'en' : 'bg';
     let newPathname = pathname;
 
-    if (newLang === 'en' && bgToEnMapping[pathname]) {
-      newPathname = bgToEnMapping[pathname];
-    } else if (newLang === 'bg' && urlMapping[pathname]) {
-      newPathname = urlMapping[pathname];
+    if (newLang === 'en') {
+      if (bgToEnMapping[pathname]) {
+        newPathname = bgToEnMapping[pathname];
+      } else if (pathname === '/') {
+        newPathname = '/en';
+      } else if (!pathname.startsWith('/en')) {
+        // Fallback for unexpected routes - don't prefix if we don't know it, or maybe just go home
+        newPathname = '/en';
+      }
+    } else if (newLang === 'bg') {
+      if (urlMapping[pathname]) {
+        newPathname = urlMapping[pathname];
+      } else if (pathname.startsWith('/en/')) {
+         // Just a fallback in case we didn't map it
+         newPathname = '/';
+      } else if (pathname === '/en') {
+        newPathname = '/';
+      }
     }
 
     localStorage.setItem('preferredLang', newLang);

@@ -1,9 +1,9 @@
-import PrivacyPage from '../privacy-policy/page';
+import PrivacyPolicyPage from '../en/privacy-policy/page';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Политика за поверителност | Премиум Дентална Клиника',
-  description: 'Как обработваме вашите лични данни и се грижим за вашата поверителност.',
+  title: 'Политика за поверителност | Дентална Клиника',
+  description: 'Как събираме и използваме личните ви данни.',
 };
 
-export default PrivacyPage;
+export default PrivacyPolicyPage;

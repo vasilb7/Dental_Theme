@@ -1,4 +1,4 @@
-import PricesPage from '../prices/page';
+import PricesPage from '../en/prices/page';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

@@ -20,7 +20,7 @@ export default function ContactPage() {
     bg: {
       title: 'Контакти',
       subtitle: 'Свържете се с нас за запитвания или запазване на час. Ние сме тук, за да ви помогнем.',
-      address: 'гр. София, ул. Примерна 123',
+      address: 'кв. Пример, ул. „Пример“ 10, Варна',
       phone: '+359 87 773 7772',
       email: 'info@dentalclinic.bg',
       hours: 'Понеделник - Петък: 09:00 - 18:00',
@@ -46,7 +46,7 @@ export default function ContactPage() {
     en: {
       title: 'Contact Us',
       subtitle: 'Get in touch with us for inquiries or to book an appointment. We are here to help you.',
-      address: '123 Example St, Sofia, Bulgaria',
+      address: 'Example District, 10 Example St, Varna',
       phone: '+359 87 773 7772',
       email: 'info@dentalclinic.bg',
       hours: 'Monday - Friday: 09:00 - 18:00',
@@ -111,10 +111,10 @@ export default function ContactPage() {
 
                 <a 
                   href="tel:+359877737772" 
-                  className="flex items-start gap-4 group cursor-pointer"
+                  className="flex items-start gap-4 group phone-ring-group cursor-pointer"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <Phone className="h-6 w-6 text-primary" />
+                    <Phone className="h-6 w-6 text-primary phone-ring-icon" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 group-hover:text-primary transition-colors">{lang === 'bg' ? 'Телефон' : 'Phone'}</h4>
@@ -148,7 +148,7 @@ export default function ContactPage() {
             {/* Interactive Map */}
             <div className="bg-slate-200 rounded-3xl h-64 w-full overflow-hidden relative border border-slate-100 shadow-sm">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.338780182657!2d23.3218675!3d42.6977082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa856d81461971%3A0x6b9762111d431c94!2sSofia%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93132.89886842796!2d27.8444391!3d43.2144708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4541743fcd0d9%3A0x400a00b0c6ac560!2sVarna%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1700000000000!5m2!1sen!2sbg" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

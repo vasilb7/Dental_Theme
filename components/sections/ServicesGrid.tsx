@@ -21,6 +21,7 @@ type Service = {
     result: string;
     images?: {
       before: string;
+      during?: string;
       after: string;
     };
   };
@@ -145,6 +146,7 @@ export function ServicesGrid() {
             result: 'Правилна подредба на зъбите, симетрична усмивка и подобрена функция на дъвкателния апарат.',
             images: {
               before: '/Orthodontics_temple/before.png',
+              during: '/Orthodontics_temple/DURING_TREATMENT.png',
               after: '/Orthodontics_temple/After_TREATMENT.png'
             }
           }
@@ -276,6 +278,7 @@ export function ServicesGrid() {
             result: 'Proper tooth alignment, a symmetrical smile, and improved chewing function.',
             images: {
               before: '/Orthodontics_temple/before.png',
+              during: '/Orthodontics_temple/DURING_TREATMENT.png',
               after: '/Orthodontics_temple/After_TREATMENT.png'
             }
           }
@@ -360,7 +363,7 @@ export function ServicesGrid() {
 
         <div className="flex justify-center mt-12">
           <Link 
-            href="/prices"
+            href={lang === 'bg' ? "/tseni" : "/en/prices"}
             className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white text-primary font-bold hover:bg-slate-50 transition-all shadow-sm border border-slate-200 hover:shadow-md"
           >
             {lang === 'bg' ? 'Вижте пълния ценоразпис' : 'View full price list'}
@@ -455,19 +458,32 @@ export function ServicesGrid() {
                              alt={`${activeService.title} Before`} 
                              fill 
                              className="object-cover"
-                             referrerPolicy="no-referrer"
                            />
                            <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
                              {lang === 'bg' ? 'Преди' : 'Before'}
                            </div>
                          </div>
+
+                         {activeService.details.images.during && (
+                           <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200">
+                             <Image 
+                               src={activeService.details.images.during} 
+                               alt={`${activeService.title} During`} 
+                               fill 
+                               className="object-cover"
+                             />
+                             <div className="absolute top-3 left-3 bg-primary/80 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                               {lang === 'bg' ? 'По време на лечението' : 'During Treatment'}
+                             </div>
+                           </div>
+                         )}
+
                          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-md border-b-2 border-accent/60">
                            <Image 
                              src={activeService.details.images.after} 
                              alt={`${activeService.title} After`} 
                              fill 
                              className="object-cover"
-                             referrerPolicy="no-referrer"
                            />
                            <div className="absolute top-3 right-3 bg-accent text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-md">
                              {lang === 'bg' ? 'След' : 'After'}
