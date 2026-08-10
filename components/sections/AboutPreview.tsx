@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { AIBadge } from '@/components/ui/AIBadge';
 
 export function AboutPreview() {
   const { lang } = useLanguage();
@@ -30,12 +31,13 @@ export function AboutPreview() {
             <div className="relative z-10">
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image 
-                  src="/together.png" 
+                  src="/VBMODELS_AI/together.png" 
                   alt="Modern dental clinic" 
                   fill 
                   className="object-cover"
                   referrerPolicy="no-referrer"
                 />
+                <AIBadge position="bottom-left" className="bottom-4 left-4" />
               </div>
               
               {/* Floating element replaced with custom button */}

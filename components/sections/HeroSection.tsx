@@ -7,18 +7,19 @@ import { Star, ShieldCheck } from 'lucide-react';
 import { PrimaryButton } from '@/components/ui/PrimaryButton';
 import { SecondaryButton } from '@/components/ui/SecondaryButton';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { AIBadge } from '@/components/ui/AIBadge';
 
 export function HeroSection() {
   const { lang } = useLanguage();
-  
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900 pt-32 pb-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src="/Hero.png" 
-          alt="Modern dental clinic" 
-          fill 
+        <Image
+          src="/Hero.png"
+          alt="Modern dental clinic"
+          fill
           className="object-cover opacity-60"
           priority
         />
@@ -31,7 +32,7 @@ export function HeroSection() {
             {lang === 'bg' ? 'Доверена дентална грижа за вашата здрава усмивка' : 'Trusted Dental Care for Your Healthy Smile'}
           </h1>
           <p className="text-xl text-slate-200 mb-10 leading-relaxed max-w-xl">
-            {lang === 'bg' 
+            {lang === 'bg'
               ? 'Изживейте модерна, безболезнена стоматология в спокойна и приветлива среда. Нашият експертен екип е посветен на вашето здраве.'
               : 'Experience modern, pain-free dentistry in a calm and welcoming environment. Our expert team is dedicated to your health.'}
           </p>
@@ -174,11 +175,11 @@ export function HeroSection() {
                 '/review_temple/Make_me_drinking_202603220841.jpeg'
               ].map((img, i) => (
                 <div key={i} className="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 overflow-hidden relative">
-                  <Image 
-                    src={img} 
-                    alt="Patient" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src={img}
+                    alt="Patient"
+                    fill
+                    className="object-cover"
                     loading="lazy"
                   />
                 </div>
@@ -188,21 +189,22 @@ export function HeroSection() {
               <div className="flex text-yellow-400">
                 {[1, 2, 3, 4, 5].map((i) => <Star key={i} className="h-5 w-5 fill-current" />)}
               </div>
-              <span className="font-bold text-white tracking-wide">{lang === 'bg' ? '500+ Доволни пациенти' : '500+ Happy Patients'}</span>
+              <span className="font-bold text-white tracking-wide">{lang === 'bg' ? '150+ Доволни пациенти' : '500+ Happy Patients'}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Desktop Image positioned at the bottom right */}
-      <div className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[80%] lg:h-[90%] xl:h-full z-20 pointer-events-none">
-        <Image 
-          src="/Hero_desktop.png" 
+      <div className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[80%] lg:h-[90%] xl:h-full z-20 pointer-events-auto">
+        <Image
+          src="/Hero_desktop.png"
           alt={lang === 'bg' ? 'Професионална дентална грижа' : 'Professional Dental Care'}
-          fill 
+          fill
           className="object-contain object-right-bottom"
           priority
         />
+        <AIBadge position="bottom-right" className="bottom-8 right-8" />
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { CheckCircle2, History, Award, Users } from 'lucide-react';
+import { AIBadge } from '@/components/ui/AIBadge';
 
 export function AdvancedAboutSection() {
   const { lang } = useLanguage();
@@ -27,38 +28,38 @@ export function AdvancedAboutSection() {
       name: 'Диана Стефанова',
       role: 'CEO & Основател',
       bio: 'Визионер и лидер, отдаден на създаването на нов стандарт в денталната грижа.',
-      image: '/Team_temple/Ceo_Diana_Stefanova.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Ceo_Diana_Stefanova.jpeg'
     },
     {
       name: 'Натали Кънева',
       role: 'Естетичен специалист',
       bio: 'Експерт в преобразяването на усмивки с прецизност и усет към детайла.',
-      image: '/Team_temple/Natali_Qneva.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Natali_Qneva.jpeg'
     },
     {
       name: 'Жасмин Добрева',
       role: 'Дентален лекар',
       bio: 'Специалист с нежен подход, вярващ в доверието и спокойната атмосфера.',
-      image: '/Team_temple/Jasmin_Dobreva.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Jasmin_Dobreva.jpeg'
     }
   ] : [
     {
       name: 'Diana Stefanova',
       role: 'CEO & Founder',
       bio: 'Visionary and leader, dedicated to creating a new standard in dental care.',
-      image: '/Team_temple/Ceo_Diana_Stefanova.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Ceo_Diana_Stefanova.jpeg'
     },
     {
       name: 'Natali Qneva',
       role: 'Aesthetic Specialist',
       bio: 'Expert in smile transformations with precision and attention to detail.',
-      image: '/Team_temple/Natali_Qneva.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Natali_Qneva.jpeg'
     },
     {
       name: 'Jasmin Dobreva',
       role: 'Dentist',
       bio: 'Specialist with a gentle approach, believing in trust and a calm atmosphere.',
-      image: '/Team_temple/Jasmin_Dobreva.jpeg'
+      image: '/VBMODELS_AI/Team_temple/Jasmin_Dobreva.jpeg'
     }
   ];
 
@@ -184,6 +185,7 @@ export function AdvancedAboutSection() {
 
                   {/* Aesthetic Accent Circle */}
                   <div className="absolute top-[30%] -right-2 w-16 h-16 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" />
+                  <AIBadge position="bottom-right" className="bottom-2 right-2" />
                 </div>
 
                 <div className="space-y-4 text-center">

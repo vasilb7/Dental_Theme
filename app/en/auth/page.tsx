@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronLeft, Mail, Lock, User, Phone, Eye, EyeOff } from 'lucide-react';
+import { AIBadge } from '@/components/ui/AIBadge';
 
 // --- Typewriter Component ---
 interface TypewriterProps {
@@ -173,12 +174,12 @@ export default function AuthPage() {
 
   const visualContent = isLogin 
     ? {
-        image: "/Auth/Login.jpeg",
+        image: "/VBMODELS_AI/Auth/Login.jpeg",
         quote: lang === 'bg' ? "Добре дошли отново! Пътешествието към перфектната усмивка продължава." : "Welcome back! The journey to a perfect smile continues.",
         author: "VB Dental Team"
       }
     : {
-        image: "/Auth/Register.jpeg",
+        image: "/VBMODELS_AI/Auth/Register.jpeg",
         quote: lang === 'bg' ? "Създайте акаунт и се възползвайте от всички възможности на нашата клиника." : "Create an account and take advantage of all our clinic's possibilities.",
         author: "VB Dental Team"
       };
@@ -463,6 +464,7 @@ export default function AuthPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent" />
             <div className="absolute inset-0 bg-slate-900/40" />
+            <AIBadge position="bottom-right" className="bottom-6 right-6" />
             
             <div className="absolute bottom-10 xl:bottom-16 left-10 xl:left-16 right-10 xl:right-16 max-w-[500px] z-10">
                <motion.div 
@@ -482,7 +484,7 @@ export default function AuthPage() {
                  <div className="mt-6 flex items-center gap-4 border-t border-white/10 pt-6">
                    <div className="w-12 h-12 xl:w-14 xl:h-14 rounded-full border-2 border-white/30 p-0.5 overflow-hidden ring-4 ring-white/5 shrink-0">
                      <Image 
-                       src="/Auth/Ceo.jpeg" 
+                       src="/VBMODELS_AI/Auth/Ceo.jpeg" 
                        width={56} 
                        height={56} 
                        alt={lang === 'bg' ? "Снимка на Диана Стефанова" : "Diana Stefanova Portrait"} 

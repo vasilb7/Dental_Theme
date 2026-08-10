@@ -9,6 +9,7 @@ import { ToothIcon } from '@/components/ui/ToothIcon';
 import { OrthodonticIcon } from '@/components/ui/OrthodonticIcon';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import { AIBadge } from '@/components/ui/AIBadge';
 
 type Service = {
   title: string;
@@ -66,8 +67,8 @@ export function ServicesGrid() {
             ],
             result: 'Гладка повърхност на зъбите, свеж дъх и здрави венци без възпаления.',
             images: {
-              before: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
-              after: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
+              before: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
+              after: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
             }
           }
         },
@@ -109,8 +110,8 @@ export function ServicesGrid() {
             ],
             result: 'Зъбите стават с 3 до 8 нюанса по-бели само в рамките на едно посещение (около 60-90 минути).',
             images: {
-              before: '/Teeth_Whitening_temple/Teeth_Whitening_before.png',
-              after: '/Teeth_Whitening_temple/Teeth_Whitening_after.png'
+              before: '/VBMODELS_AI/Teeth_Whitening_temple/Teeth_Whitening_before.png',
+              after: '/VBMODELS_AI/Teeth_Whitening_temple/Teeth_Whitening_after.png'
             }
           }
         },
@@ -127,8 +128,8 @@ export function ServicesGrid() {
             ],
             result: 'Хармонична и „холивудска“ усмивка, изцяло съобразена с чертите на лицето ви.',
             images: {
-              before: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
-              after: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
+              before: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
+              after: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
             }
           }
         },
@@ -145,9 +146,9 @@ export function ServicesGrid() {
             ],
             result: 'Правилна подредба на зъбите, симетрична усмивка и подобрена функция на дъвкателния апарат.',
             images: {
-              before: '/Orthodontics_temple/before.png',
-              during: '/Orthodontics_temple/DURING_TREATMENT.png',
-              after: '/Orthodontics_temple/After_TREATMENT.png'
+              before: '/VBMODELS_AI/Orthodontics_temple/before.png',
+              during: '/VBMODELS_AI/Orthodontics_temple/DURING_TREATMENT.png',
+              after: '/VBMODELS_AI/Orthodontics_temple/After_TREATMENT.png'
             }
           }
         }
@@ -172,8 +173,8 @@ export function ServicesGrid() {
             ],
             result: 'Усещане и вид на напълно естествен зъб, който при правилна поддръжка може да издържи десетилетия.',
             images: {
-              before: '/dental_implants_temple/Dental_Implants_before.png',
-              after: '/dental_implants_temple/Dental_Implants_after.png'
+              before: '/VBMODELS_AI/dental_implants_temple/Dental_Implants_before.png',
+              after: '/VBMODELS_AI/dental_implants_temple/Dental_Implants_after.png'
             }
           }
         }
@@ -198,8 +199,8 @@ export function ServicesGrid() {
             ],
             result: 'A smooth tooth surface, fresh breath, and healthy gums without inflammation.',
             images: {
-              before: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
-              after: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
+              before: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
+              after: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
             }
           }
         },
@@ -241,8 +242,8 @@ export function ServicesGrid() {
             ],
             result: 'Teeth become 3 to 8 shades whiter in just one visit (about 60-90 minutes).',
             images: {
-              before: '/Teeth_Whitening_temple/Teeth_Whitening_before.png',
-              after: '/Teeth_Whitening_temple/Teeth_Whitening_after.png'
+              before: '/VBMODELS_AI/Teeth_Whitening_temple/Teeth_Whitening_before.png',
+              after: '/VBMODELS_AI/Teeth_Whitening_temple/Teeth_Whitening_after.png'
             }
           }
         },
@@ -259,8 +260,8 @@ export function ServicesGrid() {
             ],
             result: 'A harmonious and "Hollywood" smile, fully tailored to your facial features.',
             images: {
-              before: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
-              after: '/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
+              before: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_before.png',
+              after: '/VBMODELS_AI/Cosmetic_Dentistry_Veneers_temple/Cosmetic_Dentistry_Veneers_after.png'
             }
           }
         },
@@ -277,9 +278,9 @@ export function ServicesGrid() {
             ],
             result: 'Proper tooth alignment, a symmetrical smile, and improved chewing function.',
             images: {
-              before: '/Orthodontics_temple/before.png',
-              during: '/Orthodontics_temple/DURING_TREATMENT.png',
-              after: '/Orthodontics_temple/After_TREATMENT.png'
+              before: '/VBMODELS_AI/Orthodontics_temple/before.png',
+              during: '/VBMODELS_AI/Orthodontics_temple/DURING_TREATMENT.png',
+              after: '/VBMODELS_AI/Orthodontics_temple/After_TREATMENT.png'
             }
           }
         }
@@ -304,8 +305,8 @@ export function ServicesGrid() {
             ],
             result: 'The feel and look of a completely natural tooth, which with proper maintenance can last for decades.',
             images: {
-              before: '/dental_implants_temple/Dental_Implants_before.png',
-              after: '/dental_implants_temple/Dental_Implants_after.png'
+              before: '/VBMODELS_AI/dental_implants_temple/Dental_Implants_before.png',
+              after: '/VBMODELS_AI/dental_implants_temple/Dental_Implants_after.png'
             }
           }
         }

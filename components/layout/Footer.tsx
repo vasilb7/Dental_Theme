@@ -8,20 +8,20 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export function Footer() {
   const { lang } = useLanguage();
-  
-  const links = lang === 'bg' 
+
+  const links = lang === 'bg'
     ? [
-        { name: 'Нашите услуги', href: '/uslugi' },
-        { name: 'Запознайте се с екипа', href: '/ekip' },
-        { name: 'Цени и осигуровки', href: '/tseni' },
-        { name: 'Запази час', href: '/zapazi-chas' }
-      ]
+      { name: 'Нашите услуги', href: '/uslugi' },
+      { name: 'Запознайте се с екипа', href: '/ekip' },
+      { name: 'Цени и осигуровки', href: '/tseni' },
+      { name: 'Запази час', href: '/zapazi-chas' }
+    ]
     : [
-        { name: 'Our Services', href: '/en/services' },
-        { name: 'Meet the Team', href: '/en/team' },
-        { name: 'Pricing & Insurance', href: '/en/prices' },
-        { name: 'Book Appointment', href: '/en/book-appointment' }
-      ];
+      { name: 'Our Services', href: '/en/services' },
+      { name: 'Meet the Team', href: '/en/team' },
+      { name: 'Pricing & Insurance', href: '/en/prices' },
+      { name: 'Book Appointment', href: '/en/book-appointment' }
+    ];
 
   return (
     <footer className="bg-slate-950 text-white pt-16 pb-8">
@@ -31,15 +31,15 @@ export function Footer() {
           <div className="max-w-md text-center lg:text-left">
             <h3 className="text-2xl font-bold mb-2">{lang === 'bg' ? 'Абонирайте се за нашия бюлетин' : 'Subscribe to Our Newsletter'}</h3>
             <p className="text-secondary text-sm">
-              {lang === 'bg' 
-                ? 'Получавайте най-новите новини, съвети за дентално здраве и промоции директно във вашата поща.' 
+              {lang === 'bg'
+                ? 'Получавайте най-новите новини, съвети за дентално здраве и промоции директно във вашата поща.'
                 : 'Get the latest news, dental health tips, and promotions directly to your inbox.'}
             </p>
           </div>
           <form className="flex flex-col sm:flex-row w-full lg:w-max gap-3 sm:gap-2">
-            <input 
-              type="email" 
-              placeholder={lang === 'bg' ? 'Вашият имейл' : 'Your email'} 
+            <input
+              type="email"
+              placeholder={lang === 'bg' ? 'Вашият имейл' : 'Your email'}
               className="bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-sm focus:outline-none focus:border-accent w-full sm:w-80 transition-colors"
               required
             />
@@ -53,17 +53,17 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href={lang === 'bg' ? "/" : "/en"} className="flex items-center gap-2 mb-6">
-              <Image 
-                src="/logo_footer.png" 
-                alt="DentalClinic Logo" 
-                width={200} 
-                height={96}  
+              <Image
+                src="/logo_footer.png"
+                alt="DentalClinic Logo"
+                width={200}
+                height={96}
                 style={{ filter: "brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(1652%) hue-rotate(170deg) brightness(85%) contrast(93%)" }}
                 className="h-24 w-auto object-contain"
               />
             </Link>
             <p className="text-secondary text-sm leading-relaxed">
-              {lang === 'bg' 
+              {lang === 'bg'
                 ? 'Предоставяме първокласна дентална грижа с фокус върху комфорта, модерните технологии и персонализираните планове за лечение за цялото семейство.'
                 : 'Providing premium dental care with a focus on comfort, modern technology, and personalized treatment plans for the whole family.'}
             </p>
@@ -134,7 +134,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-secondary/30 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-secondary">
-          <p>&copy; {new Date().getFullYear()} VB DENTAL. {lang === 'bg' ? 'Всички права запазени.Сайта е изработен от VB CREATIVE' : 'All rights reserved. Site made by VB CREATIVE'}</p>
+          <p>&copy; {new Date().getFullYear()} VB DENTAL. {lang === 'bg' ? 'Всички права запазени. Temple created by Vasil Benkov (VB)' : 'All rights reserved. Site made by VB CREATIVE'}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href={lang === 'bg' ? "/politika-za-poveritelnost" : "/en/privacy-policy"} className="hover:text-white transition-colors">{lang === 'bg' ? 'Политика за поверителност' : 'Privacy Policy'}</Link>
             <Link href={lang === 'bg' ? "/obshti-usloviya" : "/en/terms"} className="hover:text-white transition-colors">{lang === 'bg' ? 'Условия за ползване' : 'Terms of Service'}</Link>
